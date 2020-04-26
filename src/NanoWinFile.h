@@ -17,8 +17,9 @@
 typedef void OVERLAPPED; // Not supported as var
 typedef OVERLAPPED *LPOVERLAPPED;
 
-#define FILE_SHARE_READ  (0x01)
-#define FILE_SHARE_WRITE (0x02)
+#define FILE_SHARE_READ   (0x01)
+#define FILE_SHARE_WRITE  (0x02)
+#define FILE_SHARE_DELETE (0x04)
 
 #define GENERIC_READ  (0x80000000)
 #define GENERIC_WRITE (0x40000000)
