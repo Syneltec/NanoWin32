@@ -540,7 +540,7 @@ namespace
 
     void unreadChar(char_result_type ch)
     {
-      return stream->unreadChar(ch);
+      stream->unreadChar(ch);
     }
 
     bool eof() const
