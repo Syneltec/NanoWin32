@@ -220,7 +220,7 @@ NW_MAKE_PLP_TYPES_BY(VARIANTARG);
 inline void VariantInit(VARIANTARG *pvarg)
 {
   if (pvarg == NULL) { return; } // Bug trap
-  memset(pvarg, 0, sizeof(*pvarg)); // Just in case (strictly speaking not need)
+  memset((void*)pvarg, 0, sizeof(*pvarg)); // Just in case (strictly speaking not need)
   pvarg->vt = VT_EMPTY;
 }
 
