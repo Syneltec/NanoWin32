@@ -7,7 +7,13 @@
 
 NW_EXTERN_C_BEGIN
 
-typedef void*        PTIMERAPCROUTINE;
+typedef
+VOID
+(WINAPI *PTIMERAPCROUTINE)(
+    LPVOID lpArgToCompletionRoutine,
+    DWORD dwTimerLowValue,
+    DWORD dwTimerHighValue
+    );
 
 // NOTE: the following parametes are not supported: lpTimerAttributes, lpTimerName (must be NULL)
 extern HANDLE WINAPI CreateWaitableTimerA     (LPSECURITY_ATTRIBUTES lpTimerAttributes,
