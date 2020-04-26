@@ -44,15 +44,22 @@
 // CALLBACK, WINAPI, and APIENTRY are all used to define functions with the __stdcall calling convention. 
 // Most functions in the Windows API are declared using WINAPI. 
 // You may wish to use CALLBACK for the callback functions that you implement to help identify the function as a callback function.
-#define WINAPI    // __stdcall
-#define CALLBACK  // __stdcall 
+#define WINAPI
+#define CALLBACK
 #define APIENTRY  WINAPI
+
+#define __cdecl
+#define  _cdecl
 
 // Function naming style
 #if defined(__cplusplus)
 #define WINBASEAPI extern "C"
+#define WINUSERAPI extern "C"
+#define WINADVAPI  extern "C"
 #else
 #define WINBASEAPI extern
+#define WINUSERAPI extern
+#define WINADVAPI  extern
 #endif
 
 // Basic windows types
@@ -90,6 +97,7 @@ typedef const void FAR                *LPCVOID;
 
 // WinDef.h
 
+typedef unsigned char                  UCHAR;    NW_MAKE_PLP_TYPES_BY(UCHAR);  // 8 bit
 typedef unsigned char                  BYTE;     NW_MAKE_PLP_TYPES_BY(BYTE);  // 8 bit
 
 typedef uint16_t                       WORD;     NW_MAKE_PLP_TYPES_BY(WORD);   // 16 bit u
@@ -168,9 +176,9 @@ typedef uintptr_t                      DWORD_PTR;
 
 // WinNT.h
 
-typedef char                           CHAR;
-typedef unsigned char                  UCHAR;
-typedef wchar_t                        WCHAR;
+typedef char                           CHAR , * PCHAR;
+typedef unsigned char                  UCHAR, * PUCHAR;
+typedef wchar_t                        WCHAR, * PWCHAR;
 
 // WinNT.h string types
 
