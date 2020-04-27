@@ -30,6 +30,7 @@
 #define NanoWinIncluded
 
 #include "NanoWinTypes.h"
+#include "NanoWinTypes1.h"       // CCL Other missing API / Structures
 #include "NanoWinSystem.h"
 #include "NanoWinOther.h"
 #include "NanoWinError.h"
@@ -45,11 +46,15 @@
 #include "NanoWinStrConvert.h"
 #include "NanoWinThreads.h"
 #include "NanoWinWaitableTimer.h"
-#include "NanoWinQueryPerf.h" // QueryPerformanceCounter and alike
-#include "NanoWinPrivateProfile.h" // .ini file functions
+#include "NanoWinQueryPerf.h"
+#include "NanoWinPrivateProfile.h"
+#include "NanoWinTypes2.h"       // CCL Other missing API / Structures
 
-// Some xtrats
+#include "guiddef.h"
+#include "NanoWinOAVariant.h"
 
+#include "NanoWinMsExtra.h" // Other missing API / Structures
 #include "NanoWinShellEx.h" // SHCreateDirectory // originaly declared in "Shlobj.h"
 
-#endif
+
+#endif 
