@@ -19,7 +19,7 @@
 #ifndef GUID_DEFINED
 #define GUID_DEFINED
 
-typedef struct
+typedef struct _GUID
 {
     unsigned long  Data1;
     unsigned short Data2;
@@ -28,7 +28,7 @@ typedef struct
 } GUID;
 
 /* Macros for __uuidof emulation */
-#if defined(__cplusplus) && !defined(_MSC_VER)
+#if defined(__cplusplus)
 
 extern "C++"
 {

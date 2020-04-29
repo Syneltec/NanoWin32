@@ -83,6 +83,7 @@ WINBASEAPI BOOL        WINAPI WritePrivateProfileStructW(LPCWSTR,LPCWSTR,LPVOID,
 #undef MAX_PATH
 #endif /* MAX_PATH */
 
+char * WINAPI itoa(int,char*,int);
 
 #define FILE_FLAG_OVERLAPPED            0x40000000
 

@@ -5,9 +5,9 @@
  *      Author: charly
  */
 
-#ifndef TCHAR_H_
-#define TCHAR_H_
+#ifndef CSTRING_H_INCLUDED
+#define CSTRING_H_INCLUDED
 
 #include "NanoWinMFCAfxStr.h"
 
-#endif /* TCHAR_H_ */
+#endif /* CSTRING_H_INCLUDED */

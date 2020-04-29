@@ -30,7 +30,9 @@
 #define NanoWinIncluded
 
 #include "NanoWinTypes.h"
+
 #include "NanoWinTypes1.h"       // CCL Other missing API / Structures
+
 #include "NanoWinSystem.h"
 #include "NanoWinOther.h"
 #include "NanoWinError.h"
@@ -48,6 +50,7 @@
 #include "NanoWinWaitableTimer.h"
 #include "NanoWinQueryPerf.h"
 #include "NanoWinPrivateProfile.h"
+
 #include "NanoWinTypes2.h"       // CCL Other missing API / Structures
 
 #include "guiddef.h"

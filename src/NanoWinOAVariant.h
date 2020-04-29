@@ -97,9 +97,9 @@ typedef short VARIANT_BOOL;
 #define VARIANT_FALSE ((VARIANT_BOOL)0)
 
 // COM interfgaces (not supported)
-typedef void *IUnknown;
-typedef void *IDispatch;
-typedef void *IRecordInfo;
+struct IUnknown    { };
+struct IDispatch   { };
+struct IRecordInfo { };
 
 typedef void  SAFEARRAY; // OAIdl.h // not supported
 
