@@ -6,7 +6,7 @@
 // NanoWin is designed to help port C/C++ code written for MS VS to GNU Linux
 
 // NanoWin.h substitution for Windows.h
-// replace #include <Windows.h> with #include <NanoWin.h>
+// replace #include <windows.h> with #include <NanoWin.h>
 // You may also rename NanoWin.h to Windows.h (or use soft link to map)
 
 // Other files you probably may need to include:
