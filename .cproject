@@ -69,6 +69,8 @@
                                     								
                                 </option>
                                 								
+                                <option id="gnu.cpp.compiler.option.dialect.flags.1904320887" name="Other dialect flags" superClass="gnu.cpp.compiler.option.dialect.flags" useByScannerDiscovery="true" value="-fpermissive" valueType="string"/>
+                                								
                                 <inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.1986771107" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
                                 							
                             </tool>

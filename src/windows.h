@@ -6,7 +6,7 @@
 // NanoWin is designed to help port C/C++ code written for MS VS to GNU Linux
 
 // NanoWin.h substitution for Windows.h
-// replace #include <windows.h> with #include <NanoWin.h>
+// replace #include <Windows.h> with #include <NanoWin.h>
 // You may also rename NanoWin.h to Windows.h (or use soft link to map)
 
 // Other files you probably may need to include:
@@ -30,9 +30,6 @@
 #define NanoWinIncluded
 
 #include "NanoWinTypes.h"
-
-#include "NanoWinTypes1.h"       // CCL Other missing API / Structures
-
 #include "NanoWinSystem.h"
 #include "NanoWinOther.h"
 #include "NanoWinError.h"
@@ -48,16 +45,13 @@
 #include "NanoWinStrConvert.h"
 #include "NanoWinThreads.h"
 #include "NanoWinWaitableTimer.h"
-#include "NanoWinQueryPerf.h"
-#include "NanoWinPrivateProfile.h"
+#include "NanoWinQueryPerf.h" // QueryPerformanceCounter and alike
+#include "NanoWinPrivateProfile.h" // .ini file functions
 
-#include "NanoWinTypes2.h"       // CCL Other missing API / Structures
+// Some xtrats
 
-#include "guiddef.h"
-#include "NanoWinOAVariant.h"
+#include "NanoWinShellEx.h"      // SHCreateDirectory // originaly declared in "Shlobj.h"
+#include "NanoWinTCHAR.h"        // Nanowin substitute for TCHAR.h
+#include "NanoWinMsExtra.h"      // Extra functions defined in MS VS that is missing under GNU/POSIX like _fullpath
 
-#include "NanoWinMsExtra.h" // Other missing API / Structures
-#include "NanoWinShellEx.h" // SHCreateDirectory // originaly declared in "Shlobj.h"
-
-
-#endif 
+#endif

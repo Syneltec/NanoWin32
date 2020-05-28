@@ -54,8 +54,7 @@ extern DWORD SignalObjectAndWait
   BOOL   bAlertable
 );
 
-#if 0 // TODO: N/A under Linux (implement me later)
-
+// TODO: N/A under Linux (implement me later)
 // Waits until the specified object is in the signaled state or the time-out interval elapses.
 // Thread handle (wait for thread case is a priority)
 extern DWORD WaitForSingleObject
@@ -74,8 +73,6 @@ extern DWORD WaitForMultipleObjects
   BOOL    bWaitAll,
   DWORD   dwMilliseconds
 );
-
-#endif
 
 NW_EXTERN_C_END
 
