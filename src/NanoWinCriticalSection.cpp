@@ -5,9 +5,9 @@
 
 // CriticalSection functions
 
-#include "NanoWinCriticalSection.h"
+#include "../inc/NanoWinCriticalSection.h"
 
-//#include "NanoWinError.h"
+//#include "../inc/NanoWinError.h"
 
 NW_EXTERN_C_BEGIN
 

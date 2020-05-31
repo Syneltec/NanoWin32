@@ -5,10 +5,10 @@
 
 // Module functions
 
-#include "NanoWinModule.h"
+#include "../inc/NanoWinModule.h"
 
-#include "NanoWinError.h"
-#include "NanoWinStrConvert.h"
+#include "../inc/NanoWinError.h"
+#include "../inc/NanoWinStrConvert.h"
 
 #include <unistd.h>
 #include <dlfcn.h>

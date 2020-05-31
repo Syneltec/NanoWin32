@@ -5,10 +5,10 @@
 
 // Additional functions (not part of Win API, but provided by NanoWin)
 
-#include "NanoWinPlus.h"
-#include "NanoWinError.h"
-#include "NanoWinFileSys.h"
-#include "NanoWinStrConvert.h"
+#include "../inc/NanoWinPlus.h"
+#include "../inc/NanoWinError.h"
+#include "../inc/NanoWinFileSys.h"
+#include "../inc/NanoWinStrConvert.h"
 
 #include <string.h>
 

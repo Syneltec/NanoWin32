@@ -4,7 +4,7 @@
 
 #include <vector>
 
-#include "NanoWinEvents.h"
+#include "../inc/NanoWinEvents.h"
 
 #define NW32_MILLISECONDS_IN_SECOND     (1000)
 #define NW32_NANOSECONDS_IN_MILLISECOND (1000000L)

@@ -5,7 +5,7 @@
 
 // Microsoft safe string extensions
 
-#include "NanoWinMsSafeString.h"
+#include "../inc/NanoWinMsSafeString.h"
 
 #if defined(__GNUC__)
 
@@ -17,7 +17,7 @@
 #include <wchar.h>
 #include <errno.h>
 
-#include "NanoWinMsPrintf.h"
+#include "../inc/NanoWinMsPrintf.h"
 
 // Error handler to be risen in case of _s function fail
 // -----------------------------------------------------

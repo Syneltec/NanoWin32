@@ -5,9 +5,9 @@
 
 // MFCStr functions
 
-#include "NanoWinMFCAfxStr.h"
+#include "../inc/NanoWinMFCAfxStr.h"
 
-// #include "NanoWinError.h"
+// #include "../inc/NanoWinError.h"
 
 const char    *NanoWinStringUtils::empty_str  = "";
 const wchar_t *NanoWinStringUtils::empty_wstr = L"";

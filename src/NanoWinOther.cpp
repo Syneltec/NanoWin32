@@ -5,10 +5,10 @@
 
 // Other functions
 
-#include "NanoWinOther.h"
+#include "../inc/NanoWinOther.h"
 
-#include "NanoWinQueryPerf.h"
-//#include "NanoWinError.h"
+#include "../inc/NanoWinQueryPerf.h"
+//#include "../inc/NanoWinError.h"
 
 #include <stdlib.h>
 

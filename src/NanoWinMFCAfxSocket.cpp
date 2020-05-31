@@ -4,9 +4,9 @@
 #include <netdb.h>
 #include <arpa/inet.h>
 
-#include "NanoWinError.h"
-#include "NanoWinStrConvert.h"
-#include "NanoWinMFCAfxSocket.h"
+#include "../inc/NanoWinError.h"
+#include "../inc/NanoWinStrConvert.h"
+#include "../inc/NanoWinMFCAfxSocket.h"
 
 extern BOOL AfxSocketInit(WSADATA *)
 {

@@ -7,9 +7,9 @@
 
 #include <string.h>
 
-#include "NanoWinShellEx.h"
-#include "NanoWinError.h"
-#include "NanoWinPlus.h"
+#include "../inc/NanoWinShellEx.h"
+#include "../inc/NanoWinError.h"
+#include "../inc/NanoWinPlus.h"
 
 NW_EXTERN_C_BEGIN
 

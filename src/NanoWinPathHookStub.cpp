@@ -5,11 +5,11 @@
 
 // PathHook functions: Standard library functions path-hook stub for link
 
-#include "NanoWinPathHookStub.h"
+#include "../inc/NanoWinPathHookStub.h"
 
 #if defined LINUX
 
-#include "NanoWinPathHookGate.h"
+#include "../inc/NanoWinPathHookGate.h"
 
 #include <sys/types.h>
 #include <sys/stat.h>

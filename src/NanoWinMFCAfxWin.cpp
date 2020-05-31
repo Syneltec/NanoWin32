@@ -6,9 +6,9 @@
 // MFCApp functions
 // Subset of Windows API GUI functions stubs for MFC applications
 
-#include "NanoWinMFCAfxWin.h"
+#include "../inc/NanoWinMFCAfxWin.h"
 
-#include "NanoWinError.h"
+#include "../inc/NanoWinError.h"
 
 static int NanoWinGetMessageBoxDefaultButton(int nType)
 {

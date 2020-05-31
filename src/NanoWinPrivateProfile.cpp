@@ -1,5 +1,5 @@
-#include "NanoWinPrivateProfile.h"
-#include "NanoWinError.h"
+#include "../inc/NanoWinPrivateProfile.h"
+#include "../inc/NanoWinError.h"
 
 #include <stdio.h>
 #include <string.h>
@@ -31,7 +31,7 @@
 #define GetProfXIniFileDefaultPermissions (S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH)
 #endif
 
-#include "NanoWinStrConvert.h"
+#include "../inc/NanoWinStrConvert.h"
 using namespace NanoWin;
 
 /*

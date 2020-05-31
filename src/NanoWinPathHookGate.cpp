@@ -5,7 +5,7 @@
 
 // PathHook functions: Standard library functions path-hook gates
 
-#include "NanoWinPathHookGate.h"
+#include "../inc/NanoWinPathHookGate.h"
 
 #if defined LINUX
 
@@ -37,7 +37,7 @@
 // Translation function
 // ==================================================================
 
-#include "NanoWinPathHook.h"
+#include "../inc/NanoWinPathHook.h"
 
 // The function should translate srcpath if need
 // translation result should be returned to *poutpath (initially *poutpath is equal srcpath)
@@ -60,7 +60,7 @@ static errno_t translate_path(const char **poutpath, const char *srcpath, char *
 // The gates tools
 // ==================================================================
 
-#include "NanoWinMsSafeString.h" // _countof(x)
+#include "../inc/NanoWinMsSafeString.h" // _countof(x)
 
 // Middle level macros
 

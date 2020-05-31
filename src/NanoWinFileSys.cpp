@@ -5,10 +5,10 @@
 
 // FileSys functions
 
-#include "NanoWinFileSys.h"
+#include "../inc/NanoWinFileSys.h"
 
-#include "NanoWinStrConvert.h"
-#include "NanoWinError.h"
+#include "../inc/NanoWinStrConvert.h"
+#include "../inc/NanoWinError.h"
 
 #include <sys/stat.h>
 #include <sys/types.h>
