@@ -14,13 +14,13 @@
 #include <unistd.h>
 #include <errno.h>
 
-#include "../inc/NanoWinInternal.h"
-#include "../inc/NanoWinStrConvert.h"
-#include "../inc/NanoWinMsSafeString.h"
-#include "../inc/NanoWinFileFind.h"
-#include "../inc/NanoWinFileSys.h"
+#include "inc/NanoWinInternal.h"
+#include "inc/NanoWinStrConvert.h"
+#include "inc/NanoWinMsSafeString.h"
+#include "inc/NanoWinFileFind.h"
+#include "inc/NanoWinFileSys.h"
 
-#include "../inc/NanoWinError.h"
+#include "inc/NanoWinError.h"
 
 typedef struct
 {

@@ -5,10 +5,10 @@
 
 // System functions
 
-#include "../inc/NanoWinSystem.h"
+#include "inc/NanoWinSystem.h"
 
-#include "../inc/NanoWinModule.h"
-#include "../inc/NanoWinError.h"
+#include "inc/NanoWinModule.h"
+#include "inc/NanoWinError.h"
 
 #include <sys/types.h>
 #include <limits.h>

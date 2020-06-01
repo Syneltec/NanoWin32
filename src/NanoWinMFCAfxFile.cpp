@@ -10,12 +10,12 @@
 #include "stdio.h"
 #include <errno.h>
 
-#include "../inc/NanoWinMFCAfxFile.h"
+#include "inc/NanoWinMFCAfxFile.h"
 
-#include "../inc/NanoWinFile.h"
-#include "../inc/NanoWinError.h"
-#include "../inc/NanoWinStrConvert.h"
-#include "../inc/NanoWinInternal.h"
+#include "inc/NanoWinFile.h"
+#include "inc/NanoWinError.h"
+#include "inc/NanoWinStrConvert.h"
+#include "inc/NanoWinInternal.h"
 
 // CFileFind
 // --------------

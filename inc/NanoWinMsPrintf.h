@@ -18,8 +18,8 @@
 
 #if defined(__GNUC__)
 
-#include "../inc/NanoWinTypes.h"
-#include "../inc/NanoWinMsWFormatProc.h"
+#include "inc/NanoWinTypes.h"
+#include "inc/NanoWinMsWFormatProc.h"
 
 #include <wchar.h>
 

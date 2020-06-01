@@ -5,9 +5,9 @@
 
 // Bmp functions
 
-#include "../inc/NanoWinBmp.h"
+#include "inc/NanoWinBmp.h"
 
-#include "../inc/NanoWinError.h"
+#include "inc/NanoWinError.h"
 
 NW_EXTERN_C_BEGIN
 

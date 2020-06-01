@@ -8,7 +8,7 @@
 #if !defined(NanoWinCriticalSectionIncluded)
 #define NanoWinCriticalSectionIncluded
 
-#include "../inc/NanoWinTypes.h"
+#include "inc/NanoWinTypes.h"
 
 #if defined LINUX
 

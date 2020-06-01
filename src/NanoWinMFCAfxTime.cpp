@@ -5,7 +5,7 @@
 
 // MFCTime functions
 
-#include "../inc/NanoWinMFCAfxTime.h"
+#include "inc/NanoWinMFCAfxTime.h"
 
 #define NanoWinCTimeYearBase (1900)
 

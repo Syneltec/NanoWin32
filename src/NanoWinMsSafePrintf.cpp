@@ -11,7 +11,7 @@
 
 #include <errno.h>
 
-#include "../inc/NanoWinMsSafePrintf.h"
+#include "inc/NanoWinMsSafePrintf.h"
 
 // Borrowed from NanoWinMsSafeString.cpp
 #define invoke_err_handler(etext,earg,errcode) { NanoWin_invoke_constraint_handler_s(etext,(void*)earg,errcode); }
@@ -80,7 +80,7 @@ NW_EXTERN_C_END
 // -----------------------------------------------------
 
 // Note: only processor included, function remapping not included, so all calls to wprintf form here are native
-#include "../inc/NanoWinMsWFormatProc.h"
+#include "inc/NanoWinMsWFormatProc.h"
 
 NW_EXTERN_C_BEGIN
 

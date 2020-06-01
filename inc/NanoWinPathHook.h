@@ -11,7 +11,7 @@
 // You can install path hooks to be used by functions:
 // file functions
 
-#include "../inc/NanoWinTypes.h" // errno_t
+#include "inc/NanoWinTypes.h" // errno_t
 
 #if defined LINUX
 

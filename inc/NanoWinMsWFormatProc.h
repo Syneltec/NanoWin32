@@ -27,7 +27,7 @@
 // %hs         (non-std)   char*     // non-portable
 // %hS         (non-std)   char*     // non-portable
 
-#include "../inc/NanoWinTypes.h"
+#include "inc/NanoWinTypes.h"
 #include <wchar.h>
 
 // Internal use only
@@ -52,7 +52,7 @@ NW_EXTERN_C void NanoWinMsWFormatProcMs2Unix(wchar_t *destFormat, const wchar_t 
 
 #ifdef __cplusplus
 
-#include "../inc/NanoWinInternal.h"
+#include "inc/NanoWinInternal.h"
 
 namespace NanoWin
 {

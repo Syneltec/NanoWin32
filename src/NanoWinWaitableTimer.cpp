@@ -1,9 +1,9 @@
 #include <stdlib.h>
 #include <pthread.h>
 
-#include "../inc/NanoWinEvents.h"
-#include "../inc/NanoWinError.h"
-#include "../inc/NanoWinWaitableTimer.h"
+#include "inc/NanoWinEvents.h"
+#include "inc/NanoWinError.h"
+#include "inc/NanoWinWaitableTimer.h"
 
 typedef struct
 {

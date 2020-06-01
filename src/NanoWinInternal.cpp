@@ -5,7 +5,7 @@
 
 // Internal functions
 
-#include "../inc/NanoWinInternal.h"
+#include "inc/NanoWinInternal.h"
 
 #define NanoWinFileNameMatchMaskMaxRecLevel    (32)
 #define NanoWinFileNameMatchMaskSingleWildChar ('?')

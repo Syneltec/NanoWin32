@@ -36,7 +36,7 @@
 
 #endif
 
-#include "../inc/NanoWinMsSafeString.h"
+#include "inc/NanoWinMsSafeString.h"
 
 // MS extensions and tricks
 // ---------------------------------------------

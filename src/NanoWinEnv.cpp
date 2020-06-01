@@ -5,16 +5,16 @@
 
 // Environment functions
 
-#include "../inc/NanoWinEnv.h"
+#include "inc/NanoWinEnv.h"
 
 #include <string.h>
 #include <stdlib.h>
 #include <errno.h>
 
-#include "../inc/NanoWinMsSafeString.h"
-#include "../inc/NanoWinError.h"
+#include "inc/NanoWinMsSafeString.h"
+#include "inc/NanoWinError.h"
 
-#include "../inc/NanoWinStrConvert.h"
+#include "inc/NanoWinStrConvert.h"
 using namespace NanoWin;
 
 NW_EXTERN_C_BEGIN

@@ -10,12 +10,12 @@
 
 #include <time.h>
 
-#include "../inc/NanoWinTypes.h"
+#include "inc/NanoWinTypes.h"
 
 #if defined LINUX
 
-#include "../inc/NanoWinMFCAfxStr.h"
-#include "../inc/NanoWinSystem.h"
+#include "inc/NanoWinMFCAfxStr.h"
+#include "inc/NanoWinSystem.h"
 
 //NOTE: only date range which can be represented by UNIX time_t value is supported
 //      (for 32-bit Linux system time_t is 32-bit value and will overflow in 2038)

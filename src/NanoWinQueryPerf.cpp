@@ -5,7 +5,7 @@
 
 // QueryPerformance functions
 
-#include "../inc/NanoWinQueryPerf.h"
+#include "inc/NanoWinQueryPerf.h"
 
 #include <time.h>
 

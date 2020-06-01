@@ -8,7 +8,7 @@
 #if !defined(NanoWinPathHookStubIncluded)
 #define NanoWinPathHookStubIncluded
 
-#include "../inc/NanoWinTypes.h"
+#include "inc/NanoWinTypes.h"
 
 #if defined LINUX
 

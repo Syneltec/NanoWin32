@@ -5,9 +5,9 @@
 
 // Error suuport functions and constants
 
-#include "../inc/NanoWinOther.h"
-#include "../inc/NanoWinMsExtra.h"
-#include "../inc/NanoWinError.h"
+#include "inc/NanoWinOther.h"
+#include "inc/NanoWinMsExtra.h"
+#include "inc/NanoWinError.h"
 
 #include <errno.h>
 #include <stdio.h>

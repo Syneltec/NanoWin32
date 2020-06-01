@@ -8,7 +8,7 @@
 #if !defined(NanoWinMFCAfxColIncluded)
 #define NanoWinMFCAfxColIncluded
 
-#include "../inc/NanoWinTypes.h"
+#include "inc/NanoWinTypes.h"
 
 #if defined LINUX
 
@@ -16,8 +16,8 @@
 #include <vector>
 // MFC subset (collection classes)
 
-#include "../inc/NanoWinMFCAfx.h"
-#include "../inc/NanoWinMFCAfxStr.h"
+#include "inc/NanoWinMFCAfx.h"
+#include "inc/NanoWinMFCAfxStr.h"
 
 // Classes
 // ------------------------------------------

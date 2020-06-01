@@ -10,7 +10,7 @@
 
 #include <string>
 
-#include "../inc/NanoWinTypes.h"
+#include "inc/NanoWinTypes.h"
 
 namespace NanoWin
 {

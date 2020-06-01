@@ -8,7 +8,7 @@
 #if !defined(NanoWinShellExIncluded)
 #define NanoWinShellExIncluded
 
-#include "../inc/NanoWinTypes.h"
+#include "inc/NanoWinTypes.h"
 
 #if defined LINUX
 

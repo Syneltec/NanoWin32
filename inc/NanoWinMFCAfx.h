@@ -9,8 +9,8 @@
 #if !defined(NanoWinMFCAfxIncluded)
 #define NanoWinMFCAfxIncluded
 
-#include "../inc/NanoWinTypes.h"
-#include "../inc/NanoWinTCHAR.h"
+#include "inc/NanoWinTypes.h"
+#include "inc/NanoWinTCHAR.h"
 
 #if defined LINUX
 
@@ -142,7 +142,7 @@ class CFileException : public CSimpleException
 // --------------------------------------
 // atltypes.h
 
-#include "../inc/NanoWinRECT.h"
+#include "inc/NanoWinRECT.h"
 
 class CSize : public SIZE
 {

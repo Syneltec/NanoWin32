@@ -8,7 +8,7 @@
 #if !defined(NanoWinQueryPerfIncluded)
 #define NanoWinQueryPerfIncluded
 
-#include "../inc/NanoWinTypes.h"
+#include "inc/NanoWinTypes.h"
 
 #if defined LINUX
 

@@ -5,10 +5,10 @@
 
 // Microsoft extra functions defined, but missing under linux/unix/GCC
 
-#include "../inc/NanoWinMsExtra.h"
+#include "inc/NanoWinMsExtra.h"
 
-#include "../inc/NanoWinFileSys.h"
-#include "../inc/NanoWinStrConvert.h"
+#include "inc/NanoWinFileSys.h"
+#include "inc/NanoWinStrConvert.h"
 
 #include <stdio.h>
 #include <stdlib.h>

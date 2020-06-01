@@ -7,7 +7,7 @@
 
 #include <stdio.h>
 
-#include "../inc/NanoWinMFCAfxNUI.h"
+#include "inc/NanoWinMFCAfxNUI.h"
 
 // NW specials
 // -----------------------------------------

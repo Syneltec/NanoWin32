@@ -5,8 +5,8 @@
 
 // MFCAfx functions
 
-#include "../inc/NanoWinMsSafeString.h"
-#include "../inc/NanoWinMFCAfx.h"
+#include "inc/NanoWinMsSafeString.h"
+#include "inc/NanoWinMFCAfx.h"
 
 // implementation of abstract virtual destructor is required, without it it would be
 // impossible to instantiate its descendants

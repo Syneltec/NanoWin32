@@ -8,8 +8,8 @@
 #if !defined(NanoWinMFCAfxSocketIncluded)
 #define NanoWinMFCAfxSocketIncluded
 
-#include "../inc/NanoWinTypes.h"
-#include "../inc/NanoWinMFCAfx.h"
+#include "inc/NanoWinTypes.h"
+#include "inc/NanoWinMFCAfx.h"
 
 #if defined LINUX
 

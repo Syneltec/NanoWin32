@@ -5,10 +5,10 @@
 
 // AfxMt functions (subset)
 
-#include "../inc/NanoWinMFCAfxMt.h"
+#include "inc/NanoWinMFCAfxMt.h"
 
-#include "../inc/NanoWinError.h"
-#include "../inc/NanoWinInternal.h"
+#include "inc/NanoWinError.h"
+#include "inc/NanoWinInternal.h"
 
 CMutex::CMutex(BOOL                  bInitiallyOwn)
 {

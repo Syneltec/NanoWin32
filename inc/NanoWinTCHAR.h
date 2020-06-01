@@ -8,7 +8,7 @@
 #if !defined(NanoWinTCHARIncluded)
 #define NanoWinTCHARIncluded
 
-#include "../inc/NanoWinTypes.h"
+#include "inc/NanoWinTypes.h"
 
 #if defined LINUX
 

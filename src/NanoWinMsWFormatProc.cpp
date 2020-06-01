@@ -9,7 +9,7 @@
 
 #if defined(__GNUC__)
 
-#include "../inc/NanoWinMsWFormatProc.h"
+#include "inc/NanoWinMsWFormatProc.h"
 #include <wctype.h>
 
 // Format translation proccessor
@@ -160,7 +160,7 @@ NW_EXTERN_C void NanoWinMsWFormatProcMs2Unix(wchar_t *destFormat, const wchar_t 
 // Function redefinition tools
 // -----------------------------------------
 
-#include "../inc/NanoWinInternal.h"
+#include "inc/NanoWinInternal.h"
 
 static thread_local NanoWin::PreAllocatedBuffer<wchar_t> NanoWinMsPrintfCGate(0);
 

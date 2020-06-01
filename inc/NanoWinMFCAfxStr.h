@@ -8,7 +8,7 @@
 #if !defined(NanoWinMFCAfxStrIncluded)
 #define NanoWinMFCAfxStrIncluded
 
-#include "../inc/NanoWinTypes.h"
+#include "inc/NanoWinTypes.h"
 
 #if defined LINUX
 
@@ -19,17 +19,17 @@
 #include <stdarg.h> // va_arg
 #include <stdlib.h>
 
-#include "../inc/NanoWinMsSafeString.h"
-#include "../inc/NanoWinMsSafePrintf.h" // printf_s
-#include "../inc/NanoWinMsExtra.h" // vsnwprintf
+#include "inc/NanoWinMsSafeString.h"
+#include "inc/NanoWinMsSafePrintf.h" // printf_s
+#include "inc/NanoWinMsExtra.h" // vsnwprintf
 
-#include "../inc/NanoWinTCHAR.h"
-#include "../inc/NanoWinMFCAfx.h"
+#include "inc/NanoWinTCHAR.h"
+#include "inc/NanoWinMFCAfx.h"
 
 #include <wchar.h>
-#include "../inc/NanoWinStrConvert.h"
+#include "inc/NanoWinStrConvert.h"
 
-#include "../inc/NanoWinMsWFormatProc.h" // CStringW.Format uses ms-compatible format string
+#include "inc/NanoWinMsWFormatProc.h" // CStringW.Format uses ms-compatible format string
 
 class NanoWinStringUtils
 {
@@ -1601,7 +1601,7 @@ extern BOOL AFXAPI AfxExtractSubString(CStringW& rString, LPCWSTR lpszFullString
 // In-Place converters
 // ------------------------------------------
 
-#include "../inc/NanoWinStrConvert.h"
+#include "inc/NanoWinStrConvert.h"
 
 // #define   NW_CX2Y_MACROS_CONST_ONLY // CX2Y macros yields "const X *" output (this is work better, since non-const ptrs from CX2Y are non-writable anyway, but may prevent old code compile)
 

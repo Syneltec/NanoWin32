@@ -8,18 +8,18 @@
 #if !defined(NanoWinMFCAfxFileIncluded)
 #define NanoWinMFCAfxFileIncluded
 
-#include "../inc/NanoWinTypes.h"
+#include "inc/NanoWinTypes.h"
 
 #if defined LINUX
 
 #include <stdlib.h>
 #include <libgen.h>
 
-#include "../inc/NanoWinFileFind.h"
-#include "../inc/NanoWinFile.h"
+#include "inc/NanoWinFileFind.h"
+#include "inc/NanoWinFile.h"
 
-#include "../inc/NanoWinMFCAfx.h"
-#include "../inc/NanoWinMFCAfxStr.h"
+#include "inc/NanoWinMFCAfx.h"
+#include "inc/NanoWinMFCAfxStr.h"
 
 #if !defined(CAtlTransactionManager)
 class    CAtlTransactionManager; // // [Dummy object] Define it somewhere

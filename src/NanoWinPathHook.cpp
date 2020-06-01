@@ -5,14 +5,14 @@
 
 // PathHook functions
 
-#include "../inc/NanoWinPathHook.h"
+#include "inc/NanoWinPathHook.h"
 
 // Practical implemenation
 
 #include <errno.h>
 #include <string.h>
-#include "../inc/NanoWinTypes.h" // errno_t
-#include "../inc/NanoWinFileSys.h" // NW_DIRECTORY_SEPARATOR_* constants
+#include "inc/NanoWinTypes.h" // errno_t
+#include "inc/NanoWinFileSys.h" // NW_DIRECTORY_SEPARATOR_* constants
 
 #ifndef EOK
 #define EOK (0)

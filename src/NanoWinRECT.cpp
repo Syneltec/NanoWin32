@@ -5,7 +5,7 @@
 
 // RECT functions
 
-#include "../inc/NanoWinRECT.h"
+#include "inc/NanoWinRECT.h"
 
 NW_EXTERN_C_BEGIN
 

@@ -8,8 +8,8 @@
 #if !defined(NanoWinFileFindIncluded)
 #define NanoWinFileFindIncluded
 
-#include "../inc/NanoWinTypes.h"
-#include "../inc/NanoWinFileSys.h"
+#include "inc/NanoWinTypes.h"
+#include "inc/NanoWinFileSys.h"
 
 #if defined LINUX
 

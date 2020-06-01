@@ -9,7 +9,7 @@
 #if !defined(NanoWinMFCAfxWinIncluded)
 #define NanoWinMFCAfxWinIncluded
 
-#include "../inc/NanoWinTypes.h"
+#include "inc/NanoWinTypes.h"
 
 #if defined LINUX
 

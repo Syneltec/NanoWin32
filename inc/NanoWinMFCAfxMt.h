@@ -8,13 +8,13 @@
 #if !defined(NanoWinMFCAfxMtIncluded)
 #define NanoWinMFCAfxMtIncluded
 
-#include "../inc/NanoWinTypes.h"
+#include "inc/NanoWinTypes.h"
 
 #if defined LINUX
 
-#include "../inc/NanoWinEvents.h"
-#include "../inc/NanoWinCriticalSection.h"
-#include "../inc/NanoWinMFCAfx.h"
+#include "inc/NanoWinEvents.h"
+#include "inc/NanoWinCriticalSection.h"
+#include "inc/NanoWinMFCAfx.h"
 
 //Maybe later...
 //class CSyncObject : public CObject

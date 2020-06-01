@@ -3,9 +3,9 @@
 #include <pthread.h>
 #include <errno.h>
 
-#include "../inc/NanoWinEvents.h"
-#include "../inc/NanoWinThreads.h"
-#include "../inc/NanoWinError.h"
+#include "inc/NanoWinEvents.h"
+#include "inc/NanoWinThreads.h"
+#include "inc/NanoWinError.h"
 
 #define NW32_MILLISECONDS_IN_SECOND     (1000)
 #define NW32_NANOSECONDS_IN_MILLISECOND (1000000L)

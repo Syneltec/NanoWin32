@@ -8,7 +8,7 @@
 #if !defined(NanoWinBmpIncluded)
 #define NanoWinBmpIncluded
 
-#include "../inc/NanoWinTypes.h"
+#include "inc/NanoWinTypes.h"
 
 #if defined LINUX
 

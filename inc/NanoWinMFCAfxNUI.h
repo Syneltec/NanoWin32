@@ -8,16 +8,16 @@
 #if !defined(NanoWinMFCAfxNUIIncluded)
 #define NanoWinMFCAfxNUIIncluded
 
-#include "../inc/NanoWinTypes.h"
+#include "inc/NanoWinTypes.h"
 
 #if defined LINUX
 
 #include <map>
 #include <utility>
 
-#include "../inc/NanoWinMFCAfxStr.h"
-#include "../inc/NanoWinMFCAfxCol.h"
-#include "../inc/NanoWinMFCAfxWin.h"
+#include "inc/NanoWinMFCAfxStr.h"
+#include "inc/NanoWinMFCAfxCol.h"
+#include "inc/NanoWinMFCAfxWin.h"
 
 // NW specials
 // -----------------------------------------
@@ -339,8 +339,8 @@ class CFileDialog : public CDialog // in MFC CFileDialog inherits CCommonDialog
 // MFC misc items
 // ==================================
 
-#include "../inc/NanoWinTCHAR.h"
-#include "../inc/NanoWinOther.h"
+#include "inc/NanoWinTCHAR.h"
+#include "inc/NanoWinOther.h"
 
 typedef const RECT *PCRECT;
 typedef const RECT *LPCRECT;
@@ -449,7 +449,7 @@ inline VOID WINAPI PostQuitMessage(_In_ int nExitCode)
 
 // App main function template
 
-#include "../inc/NanoWinFileSys.h" // MAX_PATH
+#include "inc/NanoWinFileSys.h" // MAX_PATH
 
 inline int DoAppRunMain(int argc, char **argv)
 {
@@ -511,7 +511,7 @@ inline int DoAppRunMain(int argc, char **argv)
 
 // NanoSubset of AfxThreads
 
-#include "../inc/NanoWinThreads.h"
+#include "inc/NanoWinThreads.h"
 
 class CWinThread
 {

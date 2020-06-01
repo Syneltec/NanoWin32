@@ -8,7 +8,7 @@
 #if !defined(NanoWinOAVariantIncluded)
 #define NanoWinOAVariantIncluded
 
-#include "../inc/NanoWinTypes.h"
+#include "inc/NanoWinTypes.h"
 
 #if defined LINUX
 
@@ -97,9 +97,9 @@ typedef short VARIANT_BOOL;
 #define VARIANT_FALSE ((VARIANT_BOOL)0)
 
 // COM interfgaces (not supported)
-struct IUnknown    ;
-struct IDispatch   ;
-struct IRecordInfo ;
+struct IUnknown    { };
+struct IDispatch   { };
+struct IRecordInfo { };
 
 typedef void  SAFEARRAY; // OAIdl.h // not supported
 

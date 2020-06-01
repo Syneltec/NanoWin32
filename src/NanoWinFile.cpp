@@ -13,10 +13,10 @@
 #include <string.h>
 #include <errno.h>
 
-#include "../inc/NanoWinFile.h"
-#include "../inc/NanoWinError.h"
-#include "../inc/NanoWinFileSys.h"
-#include "../inc/NanoWinStrConvert.h"
+#include "inc/NanoWinFile.h"
+#include "inc/NanoWinError.h"
+#include "inc/NanoWinFileSys.h"
+#include "inc/NanoWinStrConvert.h"
 
 #if defined(__GNUC__) && !defined(__ANDROID_API__)
  #define open_nw    open64

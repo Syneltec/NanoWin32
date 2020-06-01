@@ -10,9 +10,9 @@
 
 #include <sstream>
 
-#include "../inc/NanoWinMsSafeScanf.h"
+#include "inc/NanoWinMsSafeScanf.h"
 
-#include "../inc/NanoWinMsSafeString.h" // NanoWin_invoke_constraint_handler_s
+#include "inc/NanoWinMsSafeString.h" // NanoWin_invoke_constraint_handler_s
 // Borrowed from NanoWinMsSafeString.cpp
 #define invoke_err_handler(etext,earg,errcode) { NanoWin_invoke_constraint_handler_s(etext,(void*)earg,errcode); }
 #define return_after_err_handler(etext,earg,errcode) { invoke_err_handler(etext,earg,errcode); return(errcode); }

@@ -1,7 +1,7 @@
 #ifndef __NANOWINTHREADS_H__
 #define __NANOWINTHREADS_H__
 
-#include "../inc/NanoWinTypes.h"
+#include "inc/NanoWinTypes.h"
 
 #if defined LINUX
 

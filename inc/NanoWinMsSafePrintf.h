@@ -12,8 +12,8 @@
 
 #include <stdarg.h>
 
-#include "../inc/NanoWinTypes.h"
-#include "../inc/NanoWinMsSafeString.h" // Types
+#include "inc/NanoWinTypes.h"
+#include "inc/NanoWinMsSafeString.h" // Types
 
 // String format functions (char)
 // -----------------------------------------------------

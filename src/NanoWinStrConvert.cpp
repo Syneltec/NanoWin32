@@ -5,11 +5,11 @@
 
 // INTERNAL: wchat_t to char conversion functions
 
-#include "../inc/NanoWinStrConvert.h"
+#include "inc/NanoWinStrConvert.h"
 
 #ifdef LINUX
- #include "../inc/NanoWinError.h"
- #include "../inc/NanoWinMsSafeString.h"
+ #include "inc/NanoWinError.h"
+ #include "inc/NanoWinMsSafeString.h"
 #endif
 
 #include <stdlib.h>
