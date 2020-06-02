@@ -51,6 +51,7 @@
 // Additional constants
 #define NO_ERROR                       ERROR_SUCCESS
 
+#define SUCCEEDED(stat) ((HRESULT)(stat)>=0)
 #define HRESULT_CODE(hr) ((hr) & 0xFFFF)
 #define MAKE_HRESULT(sev,fac,code) \
     ((HRESULT) (((unsigned int)(sev)<<31) | ((unsigned int)(fac)<<16) | ((unsigned int)(code))) )
@@ -68,6 +69,18 @@
 #define E_POINTER                                          _HRESULT_TYPEDEF_(0x80004003)
 #define E_ABORT                                            _HRESULT_TYPEDEF_(0x80004004)
 #define E_FAIL                                             _HRESULT_TYPEDEF_(0x80004005)
+
+// WinNT ntstatus.h
+typedef long NTSTATUS, *PNTSTATUS;
+#define STATUS_SUCCESS                ((NTSTATUS)0x00000000L) // ntsubauth
+#define STATUS_UNSUCCESSFUL           ((NTSTATUS)0xC0000001L)
+#define STATUS_INFO_LENGTH_MISMATCH   ((NTSTATUS)0xC0000004L)
+#define STATUS_INVALID_HANDLE         ((NTSTATUS)0xC0000008L)
+#define STATUS_INSUFFICIENT_RESOURCES ((NTSTATUS)0xC000009AL)
+#define STATUS_DEVICE_BUSY            ((NTSTATUS)0x80000011L)
+#define STATUS_BUSY                   ((NTSTATUS)0x80000011L)
+#define STATUS_PENDING                ((NTSTATUS)0x00000103)
+
 
 // Error functions
 // -----------------------------------------------------------------------

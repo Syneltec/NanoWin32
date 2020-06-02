@@ -31,6 +31,12 @@ extern void EnterCriticalSection                  (LPCRITICAL_SECTION lpCritical
 extern void LeaveCriticalSection                  (LPCRITICAL_SECTION lpCriticalSection);
 extern void DeleteCriticalSection                 (LPCRITICAL_SECTION lpCriticalSection);
 
+WINBASEAPI LONG WINAPI InterlockedCompareExchange (LONG volatile*,LONG,LONG);
+WINBASEAPI LONG WINAPI InterlockedDecrement       (LONG volatile*);
+WINBASEAPI LONG WINAPI InterlockedExchange        (LONG volatile*,LONG);
+WINBASEAPI LONG WINAPI InterlockedExchangeAdd     (LONG volatile*,LONG);
+WINBASEAPI LONG WINAPI InterlockedIncrement       (LONG volatile*);
+
 NW_EXTERN_C_END
 
 #endif // linux

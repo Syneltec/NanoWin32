@@ -34,7 +34,6 @@ extern BOOL WINAPI IsBadStringPtrW (_In_ LPCWSTR      lpsz, _In_ UINT_PTR ucchMa
 extern BOOL WINAPI IsBadCodePtr    (_In_ FARPROC      lpfn);
 
 // Legacy heap functions (subset)
-
 typedef HANDLE HGLOBAL;
 
 #define GMEM_FIXED      (0x0000)                     // Allocates fixed memory. The return value is a pointer.

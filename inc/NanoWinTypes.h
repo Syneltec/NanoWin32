@@ -82,6 +82,7 @@
 // Basic windows types
 // -----------------------------------------------------------------------
 
+#include <stddef.h>
 #include <stdint.h>
 #include <wchar.h>
 
@@ -375,8 +376,17 @@ typedef struct _LIST_ENTRY
 typedef unsigned char byte;
 typedef unsigned char boolean;
 
-#define LOBYTE(w)   ((BYTE)((DWORD_PTR)(w) & 0xFF))
-#define HIBYTE(w)   ((BYTE)((DWORD_PTR)(w) >> 8))
+/* Macros to split words and longs. */
+
+#define LOBYTE(w)              ((BYTE)((DWORD_PTR)(w) & 0xFF))
+#define HIBYTE(w)              ((BYTE)((DWORD_PTR)(w) >> 8))
+
+#define LOWORD(l)              ((WORD)((DWORD_PTR)(l) & 0xFFFF))
+#define HIWORD(l)              ((WORD)((DWORD_PTR)(l) >> 16))
+
+#define MAKEWORD(low,high)     ((WORD)(((BYTE)((DWORD_PTR)(low) & 0xFF)) | ((WORD)((BYTE)((DWORD_PTR)(high) & 0xFF))) << 8))
+#define MAKELONG(low,high)     ((LONG)(((WORD)((DWORD_PTR)(low) & 0xFFFF)) | ((DWORD)((WORD)((DWORD_PTR)(high) & 0xFFFF))) << 16))
+
 #define FIELD_OFFSET(type, field) ((LONG)offsetof(type, field))
 
 // errno_t

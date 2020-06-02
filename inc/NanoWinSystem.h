@@ -121,7 +121,16 @@ extern BOOL WINAPI GetProcessMemoryInfo
                      _In_  DWORD                    cb
                    );
 
-extern void WINAPI GlobalMemoryStatus (_Out_ LPMEMORYSTATUS lpBuffer);
+extern void   WINAPI GlobalMemoryStatus (_Out_ LPMEMORYSTATUS lpBuffer);
+
+/* Heap flags  from WinNT */
+#define HEAP_NO_SERIALIZE               0x00000001
+#define HEAP_GROWABLE                   0x00000002
+#define HEAP_GENERATE_EXCEPTIONS        0x00000004
+#define HEAP_ZERO_MEMORY                0x00000008
+
+extern HANDLE WINAPI GetProcessHeap (void);
+
 
 #if defined(UNICODE) || defined(_UNICODE)
  #define GetTimeFormat GetTimeFormatW
