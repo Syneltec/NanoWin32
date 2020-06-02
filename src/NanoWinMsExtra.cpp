@@ -147,18 +147,6 @@ extern wchar_t *wgetcwd(wchar_t *dest, size_t destsz)
 
 NW_EXTERN_C_END
 
-// MS string functions
-// ---------------------------------------------
-
-NW_EXTERN_C_BEGIN
-
-extern  char    *strlwr      (char    *s)  { if (s==NULL) { return(s); } char    *data = (s); while (*data != 0) { *data = (char)tolower (*data); data++;} return(s); }
-extern  char    *strupr      (char    *s)  { if (s==NULL) { return(s); } char    *data = (s); while (*data != 0) { *data = (char)toupper (*data); data++;} return(s); }
-extern  wchar_t *wcslwr      (wchar_t *s)  { if (s==NULL) { return(s); } wchar_t *data = (s); while (*data != 0) { *data = towlower(*data); data++;} return(s); }
-extern  wchar_t *wcsupr      (wchar_t *s)  { if (s==NULL) { return(s); } wchar_t *data = (s); while (*data != 0) { *data = towupper(*data); data++;} return(s); }
-
-NW_EXTERN_C_END
-
 // Path support (looks like MS specific)
 // ---------------------------------------------
 

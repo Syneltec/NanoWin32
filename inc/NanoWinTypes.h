@@ -48,8 +48,25 @@
 #define CALLBACK
 #define APIENTRY  WINAPI
 
+#define __stdcall
 #define __cdecl
 #define  _cdecl
+
+#ifndef __declspec
+#define __declspec(spec)     // Declaration of dynamic linkange for the function [Empty for Linux]
+#endif
+
+#ifndef dllexport
+#define dllexport            // Export this function to dynamic linking [Empty for Linux]
+#endif
+
+#ifndef dllimport
+#define dllimport            // Export this function with dynamic linking [Empty for Linux]
+#endif
+
+#if !defined(_declspec)
+#define _declspec(spec) __declspec(spec) // Single undescore alias for __declspec (non-stanard, but supported by MSVC)
+#endif
 
 // Function naming style
 #if defined(__cplusplus)
@@ -139,6 +156,7 @@ NW_MAKE_PLP_TYPES_BY(DWORD);
 NW_MAKE_PLP_TYPES_BY(LONG);
 NW_MAKE_PLP_TYPES_BY(ULONG);
 
+typedef int64_t  __int64;
 typedef int64_t                        LONGLONG;  NW_MAKE_PLP_TYPES_BY(LONGLONG);  // WinNT.h
 typedef uint64_t                       ULONGLONG; NW_MAKE_PLP_TYPES_BY(ULONGLONG); // WinNT.h
 typedef uint64_t                       DWORDLONG; NW_MAKE_PLP_TYPES_BY(DWORDLONG); // IntSafe.h
@@ -341,6 +359,14 @@ typedef union _ULARGE_INTEGER
 NW_MAKE_PLP_TYPES_BY(ULARGE_INTEGER)
 
 typedef double DOUBLE; // WTypesbase.h (not explicitely documented as Win32 type)
+typedef LONG   HRESULT;
+
+typedef struct _LIST_ENTRY
+{
+  struct _LIST_ENTRY *Flink;
+  struct _LIST_ENTRY *Blink;
+} LIST_ENTRY, *PLIST_ENTRY;
+
 
 // MIDL data types
 // -----------------------------------------------------------------------
@@ -349,10 +375,9 @@ typedef double DOUBLE; // WTypesbase.h (not explicitely documented as Win32 type
 typedef unsigned char byte;
 typedef unsigned char boolean;
 
-// To expotic, hope nobody used it directly
-// typedef byte          cs_byte; 
-// #define hyper         long long // __int64
-// #define MIDL_uhyper   unsigned long long // unsigned __int64
+#define LOBYTE(w)   ((BYTE)((DWORD_PTR)(w) & 0xFF))
+#define HIBYTE(w)   ((BYTE)((DWORD_PTR)(w) >> 8))
+#define FIELD_OFFSET(type, field) ((LONG)offsetof(type, field))
 
 // errno_t
 // -----------------------------------------------------------------------

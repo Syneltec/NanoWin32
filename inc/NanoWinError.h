@@ -49,8 +49,25 @@
 #define ERROR_RESOURCE_LANG_NOT_FOUND  (0x717)   //  1815 // The specified resource language ID cannot be found in the image file
 
 // Additional constants
-
 #define NO_ERROR                       ERROR_SUCCESS
+
+#define HRESULT_CODE(hr) ((hr) & 0xFFFF)
+#define MAKE_HRESULT(sev,fac,code) \
+    ((HRESULT) (((unsigned int)(sev)<<31) | ((unsigned int)(fac)<<16) | ((unsigned int)(code))) )
+
+#define _HRESULT_TYPEDEF_(x) ((HRESULT)x)
+#define NOERROR                                            _HRESULT_TYPEDEF_(0)
+#define S_OK                                               _HRESULT_TYPEDEF_(0)
+#define SEC_E_OK                                           _HRESULT_TYPEDEF_(0)
+#define S_FALSE                                            _HRESULT_TYPEDEF_(1)
+#define E_PENDING                                          _HRESULT_TYPEDEF_(0x8000000A)
+#define E_BOUNDS                                           _HRESULT_TYPEDEF_(0x8000000B)
+
+#define E_NOTIMPL                                          _HRESULT_TYPEDEF_(0x80004001)
+#define E_NOINTERFACE                                      _HRESULT_TYPEDEF_(0x80004002)
+#define E_POINTER                                          _HRESULT_TYPEDEF_(0x80004003)
+#define E_ABORT                                            _HRESULT_TYPEDEF_(0x80004004)
+#define E_FAIL                                             _HRESULT_TYPEDEF_(0x80004005)
 
 // Error functions
 // -----------------------------------------------------------------------
@@ -117,6 +134,8 @@ extern DWORD WINAPI FormatMessageW(_In_     DWORD   dwFlags,
                                    _Out_    LPWSTR  lpBuffer,
                                    _In_     DWORD   nSize,
                                    _In_opt_ va_list *Arguments);
+
+extern void  WINAPI RaiseException (DWORD,DWORD,DWORD,const ULONG_PTR *);
 
 NW_EXTERN_C_END
 

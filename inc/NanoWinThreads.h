@@ -5,11 +5,33 @@
 
 #if defined LINUX
 
+/* handler routine control signal type */
+#define CTRL_C_EVENT        0
+#define CTRL_BREAK_EVENT    1
+#define CTRL_CLOSE_EVENT    2
+#define CTRL_LOGOFF_EVENT   5
+#define CTRL_SHUTDOWN_EVENT 6
+
+/* CreateProcess: dwCreationFlag, Error codes */
+#define THREAD_PRIORITY_LOWEST          1
+#define THREAD_PRIORITY_BELOW_NORMAL    31
+#define THREAD_PRIORITY_NORMAL          63
+#define THREAD_PRIORITY_ABOVE_NORMAL    95
+#define THREAD_PRIORITY_HIGHEST         127
+
+#define CREATE_SUSPENDED                 0x00000004
+#define THREAD_PRIORITY_ERROR_RETURN    (0x7fffffff)
+#define SYNCHRONIZE                      0x00100000
+
+
 NW_EXTERN_C_BEGIN
 
-typedef DWORD(*PTHREAD_START_ROUTINE) (LPVOID lpThreadParameter);
-
+typedef DWORD(*PTHREAD_START_ROUTINE)  (LPVOID lpThreadParameter);
 typedef PTHREAD_START_ROUTINE LPTHREAD_START_ROUTINE;
+
+typedef BOOL (WINAPI *PHANDLER_ROUTINE)(DWORD dwCtrlType);
+extern  BOOL  WINAPI SetConsoleCtrlHandler (PHANDLER_ROUTINE,BOOL);
+
 
 extern HANDLE CreateThread
 (
@@ -26,6 +48,9 @@ extern BOOL TerminateThread
 	HANDLE hThread,
 	DWORD  dwExitCode
 );
+
+extern DWORD WINAPI SuspendThread         (HANDLE);
+extern DWORD WINAPI ResumeThread          (HANDLE);
 
 extern VOID WINAPI ExitThread(_In_ DWORD dwExitCode);
 

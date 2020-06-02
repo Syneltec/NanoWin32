@@ -76,11 +76,19 @@ NW_PNULLONLY_TYPE(HICON);   // typedef HANDLE HICON;   // Can assigned or passed
 // Returns default message box button as pressed
 NW_EXTERN_C int WINAPI MessageBoxA(_In_opt_ HWND hWnd, _In_opt_ LPCSTR lpText, _In_opt_ LPCSTR lpCaption, _In_ UINT uType);
 NW_EXTERN_C int WINAPI MessageBoxW(_In_opt_ HWND hWnd, _In_opt_ LPCWSTR lpText, _In_opt_ LPCWSTR lpCaption, _In_ UINT uType);
+NW_EXTERN_C int WINAPI PostThreadMessageA    (DWORD,UINT,WPARAM,LPARAM);
+NW_EXTERN_C int WINAPI PostThreadMessageW    (DWORD,UINT,WPARAM,LPARAM);
+NW_EXTERN_C int WINAPI OutputDebugStringA    (LPCSTR);
+NW_EXTERN_C int WINAPI OutputDebugStringW    (LPCWSTR);
 
 #if defined(UNICODE) || defined(_UNICODE)
-#define  MessageBox    MessageBoxW
+#define MessageBox         MessageBoxW
+#define PostThreadMessage  PostThreadMessageW
+#define OutputDebugString  OutputDebugStringW
 #else
-#define  MessageBox    MessageBoxA
+#define MessageBox         MessageBoxA
+#define PostThreadMessage  PostThreadMessageA
+#define OutputDebugString  OutputDebugStringA
 #endif
 
 #endif // linux

@@ -83,11 +83,11 @@ namespace {
 
     pthread_mutex_t  lock;
     pthread_cond_t   condition;
-    unsigned int     leftSignalCount;
-    bool             isActive;
-    NW32Event      **events;
-    unsigned int     eventCount;
-    unsigned int     signaledEventIndex;
+    unsigned int     leftSignalCount    = 0;
+    bool             isActive           = false;
+    NW32Event      **events             = NULL;
+    unsigned int     eventCount         = 0;
+    unsigned int     signaledEventIndex = 0;
   };
 
   NW32Event::NW32Event(bool                initialState,
@@ -299,6 +299,7 @@ namespace {
 
   NW32EventWaiter::NW32EventWaiter()
   {
+    isActive = false;
     if (pthread_mutex_init(&lock, NULL) != 0)
     {
       throw NW32EventError();

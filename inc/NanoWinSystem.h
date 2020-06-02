@@ -26,6 +26,12 @@ typedef struct _SYSTEMTIME // Specifies a date and time, using individual member
   WORD wMilliseconds;  // The millisecond. The valid values 0..999
 } SYSTEMTIME; NW_MAKE_PLP_TYPES_BY(SYSTEMTIME);
 
+typedef struct _FILETIME
+{
+    DWORD dwLowDateTime;
+    DWORD dwHighDateTime;
+} FILETIME, *PFILETIME, *LPFILETIME;
+
 // Retrieves the current local date and time. (in local time zone)
 extern void WINAPI GetLocalTime(_Out_ LPSYSTEMTIME lpSystemTime);
 
@@ -63,6 +69,9 @@ extern int  WINAPI GetDateFormatW(_In_            LCID       Locale,
                                   _Out_opt_       LPWSTR     lpDateStr,
                                   _In_            int        cchDate);
 
+extern BOOL  WINAPI GetFileTime           (HANDLE,LPFILETIME,LPFILETIME,LPFILETIME);
+extern BOOL  WINAPI SystemTimeToFileTime  (const SYSTEMTIME*,LPFILETIME);
+
 // Psapi.h
 // -----------------------------
 
@@ -98,6 +107,11 @@ typedef struct _MEMORYSTATUS {
   SIZE_T dwTotalVirtual;
   SIZE_T dwAvailVirtual;
 } MEMORYSTATUS, *LPMEMORYSTATUS;
+
+/* Shared Memory creation flags */
+#define PAGE_NOACCESS       0x01
+#define PAGE_READONLY       0x02
+#define PAGE_READWRITE      0x04
 
 // Supports only current proccess (so Process must be result of GetCurrentProcess() or be NULL)
 extern BOOL WINAPI GetProcessMemoryInfo

@@ -8,6 +8,8 @@
 #ifndef WINSOCK2_H_INCLUDED
 #define WINSOCK2_H_INCLUDED
 
-#include "../inc/NanoWinMFCAfxSocket.h"
+typedef int SOCKET;
+
+#include <sys/socket.h>
 
 #endif /* WINSOCK2_H_INCLUDED */

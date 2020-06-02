@@ -34,6 +34,7 @@ typedef LPCWSTR              LPCTSTR;
 typedef LPWSTR               LPTSTR;
 #define __T(text)            L ## text
 #else
+#include <wctype.h>
 typedef char                 TCHAR;
 typedef LPCSTR               LPCTSTR;
 typedef LPSTR                LPTSTR;
@@ -194,6 +195,17 @@ typedef LPSTR                LPTSTR;
 #else
 #define _tsystem             system
 #endif
+
+// MS string functions
+// ---------------------------------------------
+NW_EXTERN_C_BEGIN
+extern  char    *strlwr      (char    *s)  { if (s==NULL) { return(s); } char    *data = (s); while (*data != 0) { *data = (char)tolower (*data); data++;} return(s); }
+extern  char    *strupr      (char    *s)  { if (s==NULL) { return(s); } char    *data = (s); while (*data != 0) { *data = (char)toupper (*data); data++;} return(s); }
+extern  wchar_t *wcslwr      (wchar_t *s)  { if (s==NULL) { return(s); } wchar_t *data = (s); while (*data != 0) { *data = towlower(*data); data++;} return(s); }
+extern  wchar_t *wcsupr      (wchar_t *s)  { if (s==NULL) { return(s); } wchar_t *data = (s); while (*data != 0) { *data = towupper(*data); data++;} return(s); }
+NW_EXTERN_C_END
+
+
 
 #endif // linux
 #endif // ...Included
