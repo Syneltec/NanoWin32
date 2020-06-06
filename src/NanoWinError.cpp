@@ -140,7 +140,7 @@ extern  DWORD NanoWinErrorByErrnoRaw (errno_t errno_value, DWORD winErrorForZero
 #define NW_DEFAULT_ERROR_AT_FAIL   ERROR_INVALID_DATA
 
 // Converts errno to Win32Error, converts errno=0 to NW_DEFAULT_ERROR_AT_FAIL(ERROR_INVALID_DATA)
-extern  DWORD NanoWinErrorByErrnoAtFail(errno_t errno_value)
+extern  int NanoWinErrorByErrnoAtFail(errno_t errno_value)
 {
   return NanoWinErrorByErrnoRaw (errno_value, NW_DEFAULT_ERROR_AT_FAIL);
 }
