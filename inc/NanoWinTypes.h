@@ -49,6 +49,7 @@
 #define APIENTRY  WINAPI
 
 #define __stdcall
+#define  _stdcall
 #define __cdecl
 #define  _cdecl
 
@@ -96,7 +97,8 @@
 
 #define NW_MAKE_P_TYPE(TYPE,NAME)      typedef TYPE *P##NAME;
 #define NW_MAKE_LP_TYPE(TYPE,NAME)     typedef TYPE FAR *LP##NAME;
-#define NW_MAKE_PLP_TYPES(TYPE,NAME)   NW_MAKE_P_TYPE(TYPE,NAME); NW_MAKE_LP_TYPE(TYPE,NAME);
+#define NW_MAKE_LPC_TYPE(TYPE,NAME)    typedef const TYPE FAR *LPC##NAME;
+#define NW_MAKE_PLP_TYPES(TYPE,NAME)   NW_MAKE_P_TYPE(TYPE,NAME); NW_MAKE_LP_TYPE(TYPE,NAME); NW_MAKE_LPC_TYPE(TYPE,NAME);
 #define NW_MAKE_PLP_TYPES_BY(NAME)     NW_MAKE_PLP_TYPES(NAME,NAME);
 
 // Define pointer that can be null only (that is, you can pass it only as null)
@@ -116,7 +118,7 @@ typedef const void FAR                *LPCVOID;
 // WinDef.h
 
 typedef unsigned char                  UCHAR;    NW_MAKE_PLP_TYPES_BY(UCHAR);  // 8 bit
-typedef unsigned char                  BYTE;     NW_MAKE_PLP_TYPES_BY(BYTE);  // 8 bit
+typedef unsigned char                  BYTE;     NW_MAKE_PLP_TYPES_BY(BYTE);   // 8 bit
 
 typedef uint16_t                       WORD;     NW_MAKE_PLP_TYPES_BY(WORD);   // 16 bit u
 typedef int16_t                        SHORT;    NW_MAKE_PLP_TYPES_BY(SHORT);  // 16 bit s
@@ -384,6 +386,14 @@ typedef unsigned char boolean;
 #define LOWORD(l)              ((WORD)((DWORD_PTR)(l) & 0xFFFF))
 #define HIWORD(l)              ((WORD)((DWORD_PTR)(l) >> 16))
 
+/*--- INTEL/MOTOROLA FORMAT CONVERTION -------------------------------------*/
+#define  SWAP16(x)    ( (WORD)  ( (((WORD)(x)) >> 8) | (((WORD)(x)) << 8) ) )
+
+#define  SWAP32(x)    ( (DWORD) ( (((DWORD)(x))                >> 24) | \
+                                 ((((DWORD)(x)) & 0x00FF0000u) >>  8) | \
+                                 ((((DWORD)(x)) & 0x0000FF00u) <<  8) | \
+                                  (((DWORD)(x))                << 24) ) )
+
 #define MAKEWORD(low,high)     ((WORD)(((BYTE)((DWORD_PTR)(low) & 0xFF)) | ((WORD)((BYTE)((DWORD_PTR)(high) & 0xFF))) << 8))
 #define MAKELONG(low,high)     ((LONG)(((WORD)((DWORD_PTR)(low) & 0xFFFF)) | ((DWORD)((WORD)((DWORD_PTR)(high) & 0xFFFF))) << 16))
 
@@ -471,6 +481,19 @@ typedef DWORD LCID;
 #endif
 
 // Class definitions helpers
+
+#ifdef WINE_NO_UNICODE_MACROS
+# define WINELIB_NAME_AW(func) \
+    func##_must_be_suffixed_with_W_or_A_in_this_context \
+    func##_must_be_suffixed_with_W_or_A_in_this_context
+#else  /* WINE_NO_UNICODE_MACROS */
+# ifdef UNICODE
+#  define WINELIB_NAME_AW(func) func##W
+# else
+#  define WINELIB_NAME_AW(func) func##A
+# endif
+#endif  /* WINE_NO_UNICODE_MACROS */
+# define DECL_WINELIB_TYPE_AW(type)  typedef WINELIB_NAME_AW(type) type;
 
 #define NW_NOCOPY_CONSTRUCTOR(ClassName) private: ClassName(const ClassName &src) { }
 #define NW_NOASSIGN_OPERATOR(ClassName)  private: void operator= (const ClassName &src) { }

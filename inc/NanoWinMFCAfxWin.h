@@ -9,7 +9,7 @@
 #if !defined(NanoWinMFCAfxWinIncluded)
 #define NanoWinMFCAfxWinIncluded
 
-#include "inc/NanoWinTypes.h"
+#include "inc/NanoWinRECT.h"
 
 #if defined LINUX
 
@@ -73,6 +73,28 @@ NW_PNULLONLY_TYPE(HICON);   // typedef HANDLE HICON;   // Can assigned or passed
 #define NW_MB_GET_DEFBUTTON(nType)  (nType & 0xF00)
 #define NW_MB_GET_ICON(nType)       (nType & 0xF0)
 
+/* Windows Messages (USER subset) */
+#define WM_INITDIALOG          0x0110
+#define WM_COMMAND             0x0111
+#define WM_SYSCOMMAND          0x0112
+#define WM_TIMER               0x0113
+
+/* PeekMessage() options */
+#define PM_NOREMOVE       0x0000
+#define PM_REMOVE         0x0001
+#define PM_NOYIELD        0x0002
+
+typedef struct tagMSG
+{
+    HWND    hwnd;
+    UINT    message;
+    WPARAM  wParam;
+    LPARAM  lParam;
+    DWORD   time;
+    POINT   pt;
+} MSG, *PMSG, *LPMSG;
+
+
 // Returns default message box button as pressed
 NW_EXTERN_C int WINAPI MessageBoxA(_In_opt_ HWND hWnd, _In_opt_ LPCSTR lpText, _In_opt_ LPCSTR lpCaption, _In_ UINT uType);
 NW_EXTERN_C int WINAPI MessageBoxW(_In_opt_ HWND hWnd, _In_opt_ LPCWSTR lpText, _In_opt_ LPCWSTR lpCaption, _In_ UINT uType);
@@ -81,11 +103,20 @@ NW_EXTERN_C int WINAPI PostThreadMessageW    (DWORD,UINT,WPARAM,LPARAM);
 NW_EXTERN_C int WINAPI OutputDebugStringA    (LPCSTR);
 NW_EXTERN_C int WINAPI OutputDebugStringW    (LPCWSTR);
 
+NW_EXTERN_C LRESULT WINAPI DispatchMessageA(const MSG*);
+NW_EXTERN_C LRESULT WINAPI DispatchMessageW(const MSG*);
+NW_EXTERN_C BOOL    WINAPI PeekMessageA(LPMSG,HWND,UINT,UINT,UINT);
+NW_EXTERN_C BOOL    WINAPI PeekMessageW(LPMSG,HWND,UINT,UINT,UINT);
+
 #if defined(UNICODE) || defined(_UNICODE)
+#define PeekMessage        PeekMessageW
+#define DispatchMessage    DispatchMessageW
 #define MessageBox         MessageBoxW
 #define PostThreadMessage  PostThreadMessageW
 #define OutputDebugString  OutputDebugStringW
 #else
+#define PeekMessage        PeekMessageA
+#define DispatchMessage    DispatchMessageA
 #define MessageBox         MessageBoxA
 #define PostThreadMessage  PostThreadMessageA
 #define OutputDebugString  OutputDebugStringA

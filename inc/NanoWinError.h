@@ -48,6 +48,9 @@
 
 #define ERROR_RESOURCE_LANG_NOT_FOUND  (0x717)   //  1815 // The specified resource language ID cannot be found in the image file
 
+#define ERROR_INVALID_THREAD_ID        1444
+#define ERROR_NOT_ENOUGH_QUOTA         1816
+
 // Additional constants
 #define NO_ERROR                       ERROR_SUCCESS
 
@@ -107,7 +110,7 @@ extern  DWORD NanoWinErrorByErrnoRaw (errno_t errno_value, DWORD winErrorForZero
 
 // Converts errno to Win32Error, converts errno=0 to NW_DEFAULT_ERROR_AT_FAIL(ERROR_INVALID_DATA)
 // equvalent to call NanoWinErrorByErrnoRaw (errno_value, NW_DEFAULT_ERROR_AT_FAIL)
-extern  DWORD NanoWinErrorByErrnoAtFail(errno_t errno_value); 
+extern  int   NanoWinErrorByErrnoAtFail(errno_t errno_value);
 
 // Windows gates
 

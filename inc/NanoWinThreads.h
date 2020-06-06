@@ -12,7 +12,7 @@
 #define CTRL_LOGOFF_EVENT   5
 #define CTRL_SHUTDOWN_EVENT 6
 
-/* CreateProcess: dwCreationFlag, Error codes */
+/* CreateThread: dwCreationFlag, Error codes */
 #define THREAD_PRIORITY_LOWEST          1
 #define THREAD_PRIORITY_BELOW_NORMAL    31
 #define THREAD_PRIORITY_NORMAL          63
@@ -49,8 +49,10 @@ extern BOOL TerminateThread
 	DWORD  dwExitCode
 );
 
-extern DWORD WINAPI SuspendThread         (HANDLE);
-extern DWORD WINAPI ResumeThread          (HANDLE);
+extern DWORD  WINAPI SuspendThread         (HANDLE);
+extern DWORD  WINAPI ResumeThread          (HANDLE);
+extern HANDLE WINAPI GetCurrentThread      (void);
+extern DWORD  WINAPI GetCurrentThreadId    (void);
 
 extern VOID WINAPI ExitThread(_In_ DWORD dwExitCode);
 

@@ -69,8 +69,11 @@ extern int  WINAPI GetDateFormatW(_In_            LCID       Locale,
                                   _Out_opt_       LPWSTR     lpDateStr,
                                   _In_            int        cchDate);
 
-extern BOOL  WINAPI GetFileTime           (HANDLE,LPFILETIME,LPFILETIME,LPFILETIME);
-extern BOOL  WINAPI SystemTimeToFileTime  (const SYSTEMTIME*,LPFILETIME);
+extern BOOL  WINAPI GetFileTime            (HANDLE,LPFILETIME,LPFILETIME,LPFILETIME);
+extern BOOL  WINAPI SystemTimeToFileTime   (const SYSTEMTIME*,LPFILETIME);
+extern BOOL  WINAPI LocalFileTimeToFileTime(const FILETIME*  ,LPFILETIME);
+extern BOOL  WINAPI FileTimeToSystemTime   (const FILETIME*  ,LPSYSTEMTIME);
+extern BOOL  WINAPI FileTimeToLocalFileTime(const FILETIME*,LPFILETIME);
 
 // Psapi.h
 // -----------------------------
