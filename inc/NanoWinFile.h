@@ -34,6 +34,8 @@ typedef OVERLAPPED *LPOVERLAPPED;
 #define FILE_CURRENT      (1)
 #define FILE_END          (2)
 
+#define FILE_FLAG_OVERLAPPED            0x40000000
+
 #define INVALID_SET_FILE_POINTER ((DWORD)-1)
 #define INVALID_FILE_SIZE        ((DWORD)0xFFFFFFFF)
 

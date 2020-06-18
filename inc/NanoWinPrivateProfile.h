@@ -51,18 +51,27 @@ extern BOOL NanoWinWritePrivateProfileStringW
                                        const wchar_t *lpszString,
                                        const wchar_t *lpszFileName);
 
+extern BOOL NanoWinGetPrivateProfileStructA  (LPCSTR,LPCSTR,LPVOID,UINT,LPCSTR);
+extern BOOL NanoWinGetPrivateProfileStructW  (LPCWSTR,LPCWSTR,LPVOID,UINT,LPCWSTR);
+extern BOOL NanoWinWritePrivateProfileStructA(LPCSTR,LPCSTR,LPVOID,UINT,LPCSTR);
+extern BOOL NanoWinWritePrivateProfileStructW(LPCWSTR,LPCWSTR,LPVOID,UINT,LPCWSTR);
+
 NW_EXTERN_C_END
 
 #if defined(UNICODE) || defined(_UNICODE)
 #define NanoWinGetPrivateProfileString      NanoWinGetPrivateProfileStringW
 #define NanoWinGetPrivateProfileSection     NanoWinGetPrivateProfileSectionW
 #define NanoWinGetPrivateProfileInt         NanoWinGetPrivateProfileIntW
+#define NanoWinGetPrivateProfileStruct      NanoWinGetPrivateProfileStructW
 #define NanoWinWritePrivateProfileString    NanoWinWritePrivateProfileStringW
+#define NanoWinWritePrivateProfileStruct    NanoWinWritePrivateProfileStructW
 #else
 #define NanoWinGetPrivateProfileString      NanoWinGetPrivateProfileStringA
 #define NanoWinGetPrivateProfileSection     NanoWinGetPrivateProfileSectionA
 #define NanoWinGetPrivateProfileInt         NanoWinGetPrivateProfileIntA
+#define NanoWinGetPrivateProfileStruct      NanoWinGetPrivateProfileStructA
 #define NanoWinWritePrivateProfileString    NanoWinWritePrivateProfileStringA
+#define NanoWinWritePrivateProfileStruct    NanoWinWritePrivateProfileStructA
 #endif
 
 
@@ -77,9 +86,15 @@ NW_EXTERN_C_END
 #define GetPrivateProfileIntA          NanoWinGetPrivateProfileIntA
 #define GetPrivateProfileIntW          NanoWinGetPrivateProfileIntW
 #define GetPrivateProfileInt           NanoWinGetPrivateProfileInt
+#define GetPrivateProfileStructA       NanoWinGetPrivateProfileStructA
+#define GetPrivateProfileStructW       NanoWinGetPrivateProfileStructW
+#define GetPrivateProfileStruct        NanoWinGetPrivateProfileStruct
 #define WritePrivateProfileStringA     NanoWinWritePrivateProfileStringA
 #define WritePrivateProfileStringW     NanoWinWritePrivateProfileStringW
 #define WritePrivateProfileString      NanoWinWritePrivateProfileString
+#define WritePrivateProfileStructA     NanoWinWritePrivateProfileStructA
+#define WritePrivateProfileStructW     NanoWinWritePrivateProfileStructW
+#define WritePrivateProfileStruct      NanoWinWritePrivateProfileStruct
 
 #endif
 

@@ -468,9 +468,9 @@ extern LPCSTR kEmpty;
 extern LPCSTR kEOL;
 
 extern cString & operator << ( cString & aSource, LPCSTR aValue );
-extern cString & operator << ( cString & aSource, int aValue );
-extern cString & operator << ( cString & aSource, DWORD aValue );
-extern cString & operator << ( cString & aSource, float aValue );
+extern cString & operator << ( cString & aSource, int    aValue );
+extern cString & operator << ( cString & aSource, DWORD  aValue );
+extern cString & operator << ( cString & aSource, float  aValue );
 extern cString & operator << ( cString & aSource, double aValue );
 // -----------------------------------------------------------------------------
 
